@@ -12,7 +12,7 @@ export default function Home() {
         className="rounded-full mb-6 border"
       />
       
-      <h1 className="text-4xl font-bold mb-2">Hi, I'm Tiana Ye 👋</h1>
+      <h1 className="text-4xl font-bold mb-2">Hi, I&apos;m Tiana Ye</h1>
       <p className="text-lg max-w-xl text-gray-600 mb-8">
         I'm a software engineering student passionate about full-stack development, clean UI/UX, and solving real-world problems with code.
       </p>
