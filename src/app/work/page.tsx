@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Image from 'next/image';
 import { workExperiences } from '../../lib/data';
+import Contact from '../../components/Contact';
 
 export default function WorkPage() {
   const [filter, setFilter] = useState<'software' | 'other' | 'all'>('all');
@@ -175,6 +176,7 @@ export default function WorkPage() {
 })}
 
       </div>
+      <Contact/>
     </main>
   );
 }

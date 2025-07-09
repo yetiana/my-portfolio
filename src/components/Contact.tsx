@@ -20,6 +20,7 @@ export default function Contact() {
       <p className="max-w-2xl mb-4">
         Feel free to reach out via email or connect with me on LinkedIn.
       </p>
+      <p>tianaye317@gmail.com</p>
       <Link
         href="https://www.linkedin.com/in/tiana-ye-3193201ba/"
         target="_blank"
