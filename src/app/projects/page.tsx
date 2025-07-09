@@ -11,7 +11,7 @@ export default function ProjectsPage() {
       <h1 className="text-4xl font-bold text-[#443850] mb-8">Projects</h1>
 
       <p className="text-[#555] mb-12 max-w-2xl">
-        These are projects I've created and collaborated on — many of which were built with creativity, coffee, and lots of debugging.
+        These are projects I&apos;ve created and collaborated on — many of which were built with creativity, coffee, and lots of debugging.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

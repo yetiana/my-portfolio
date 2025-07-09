@@ -24,19 +24,6 @@ export default function WorkPage() {
       (endDate.getMonth() - startDate.getMonth());
     return Math.max(months, 1);
   };
-
-  const getUniqueYears = (jobs: typeof workExperiences) => {
-    const years = new Set<number>();
-    jobs.forEach((job) => {
-      const [start, end] = job.period.split(' – ');
-      const parseDate = (dateStr: string) => new Date(dateStr + ' 01');
-      years.add(parseDate(start).getFullYear());
-      const endDate = end.toLowerCase() === 'present' ? new Date() : parseDate(end);
-      years.add(endDate.getFullYear());
-    });
-    return [...years].sort((a, b) => b - a);
-  };
-
   const tagColors: Record<string, string> = {
     Python: 'bg-yellow-400',
     'Power BI': 'bg-blue-600',

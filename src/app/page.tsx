@@ -1,11 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Spiral from '../components/Spiral';
-import Link from 'next/link';
 import Contact from '../components/Contact';
 import WorkPreview from '../components/WorkPreview';
-import HorseSprite from '@/components/HorseSprite';
 
 export default function HomePage() {
   return (
@@ -22,7 +19,7 @@ export default function HomePage() {
         </motion.h1>
         <p className="text-lg text-[#549BF2]">Scroll down to explore!</p>
 
-        
+
         {/*horse animation */}
         <style jsx>{`
           .horse {
@@ -60,7 +57,7 @@ export default function HomePage() {
           About Me
         </motion.h2>
         <p className="max-w-2xl">
-          I'm Tiana Ye, a passionate software engineering student who loves building creative, impactful projects.
+          I&apos;m Tiana Ye, a passionate software engineering student who loves building creative, impactful projects.
         </p>
         <Spiral className="absolute top-10 left-20 animate-spin-slow w-12 h-12 opacity-50" />
         <Spiral className="absolute bottom-10 right-20 animate-spin-slow w-8 h-8 opacity-50" />
