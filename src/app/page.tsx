@@ -1,40 +1,74 @@
-import Link from 'next/link';
+'use client';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Spiral from '../components/Spiral';
+import Link from 'next/link';
+import Contact from '../components/Contact';
+import WorkPreview from '../components/WorkPreview';
+import HorseSprite from '@/components/HorseSprite';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="min-h-screen px-6 py-12 sm:py-20 flex flex-col justify-center items-center text-center bg-white text-gray-800">
-      <Image
-        src="/profile.png" // Replace with your image or remove this
-        alt="Tiana Ye"
-        width={120}
-        height={120}
-        className="rounded-full mb-6 border"
-      />
-      
-      <h1 className="text-4xl font-bold mb-2">Hi, I&apos;m Tiana Ye</h1>
-      <p className="text-lg max-w-xl text-gray-600 mb-8">
-        I&apos;m a software engineering student passionate about full-stack development, clean UI/UX, and solving real-world problems with code.
-      </p>
-
-      <div className="flex flex-col sm:flex-row gap-4">
-        <Link
-          href="/projects"
-          className="bg-[#35524a] text-white px-6 py-3 rounded-lg shadow hover:bg-[#2e473f] transition"
+    <>
+      {/* Home Section */}
+      <section id="home" className="min-h-screen flex flex-col justify-center items-center bg-[#bfdbf7] text-center">
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl font-bold text-[#443850] mb-4"
         >
-          View My Projects
-        </Link>
-        <a
-          href="mailto:tianaye@email.com"
-          className="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg shadow hover:bg-gray-300 transition"
-        >
-          Contact Me
-        </a>
-      </div>
+          Tiana Ye
+        </motion.h1>
+        <p className="text-lg text-[#549BF2]">Scroll down to explore!</p>
 
-      <footer className="mt-16 text-sm text-gray-400">
-        Built with Next.js & Tailwind CSS — © {new Date().getFullYear()} Tiana Ye
-      </footer>
-    </div>
+        
+        {/*horse animation */}
+        <style jsx>{`
+          .horse {
+            width: 82px;
+            height: 66px;
+            background: url('/horse-idle.png') no-repeat;
+            animation: horseIdle 1s steps(7) infinite;
+            image-rendering: pixelated;
+          }
+
+          @keyframes horseIdle {
+            0% {
+              background-position: 0px 0px;
+            }
+            100% {
+              background-position: -574px 0px;
+            }
+          }
+        `}</style>
+
+      <div className="horse" />
+      </section>
+
+
+
+
+      {/* About Section */}
+      <section id="about" className="min-h-screen relative flex flex-col justify-center items-start bg-[#bfdbf7] text-left px-8 lg:px-32 text-white overflow-hidden">
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-bold mb-4"
+        >
+          About Me
+        </motion.h2>
+        <p className="max-w-2xl">
+          I'm Tiana Ye, a passionate software engineering student who loves building creative, impactful projects.
+        </p>
+        <Spiral className="absolute top-10 left-20 animate-spin-slow w-12 h-12 opacity-50" />
+        <Spiral className="absolute bottom-10 right-20 animate-spin-slow w-8 h-8 opacity-50" />
+      </section>      
+
+      {/* Work Section */}
+      <WorkPreview/>
+      <Contact/>
+    </>
   );
 }

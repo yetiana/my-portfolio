@@ -1,14 +1,21 @@
 import Link from 'next/link';
+import '../styles/globals.css';
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between p-4 bg-[#f8ad9d] text-white">
-      <Link href="/" className="font-bold text-xl">Tiana Ye</Link>
-      <div className="flex gap-4">
-        <Link href="/projects">Projects</Link>
-        <Link href="/contact">Contact</Link>
-        <Link href="/about">About</Link>
-      </div>
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 flex gap-8 bg-transparent z-50">
+      <Link href="/" className="text-[#549BF2] text-lg font-semibold hover:scale-110 hover:text-[#a31621] transition-transform duration-300">
+        Home
+      </Link>
+      <Link href="work" className="text-[#549BF2] text-lg font-semibold hover:scale-110 hover:text-[#a31621] transition-transform duration-300">
+        Work Experience
+      </Link>
+      <Link href="/projects" className="text-[#549BF2] text-lg font-semibold hover:scale-110 hover:text-[#a31621] transition-transform duration-300">
+        Projects
+      </Link>
+      <Link href="#contact" className="text-[#549BF2] text-lg font-semibold hover:scale-110 hover:text-[#a31621] transition-transform duration-300">
+        Contact
+      </Link>
     </nav>
   );
 }
