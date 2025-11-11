@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Image from 'next/image';
-import { workExperiences } from '../../lib/data';
+import { workExperiences, type WorkExperience } from '../../lib/data';
 import Contact from '../../components/Contact';
 
 export default function WorkPage() {
@@ -50,7 +50,7 @@ export default function WorkPage() {
       {/* Timeline and cards */}
       <div className="relative w-full flex flex-col items-center">
         <div className="absolute h-full w-1 bg-[#443850] left-1/2 transform -translate-x-1/2"></div>
-{workExperiences.map((job: any, i: number) => {
+{workExperiences.map((job: WorkExperience, i: number) => {
   const isLeft = i % 2 === 0;
   const months = calculateDurationMonths(job.period);
   const spacing = `${months * 12}px`;

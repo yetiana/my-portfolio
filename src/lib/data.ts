@@ -1,9 +1,19 @@
 // src/lib/data.ts
-export const workExperiences = [
+export type WorkExperience = {
+  title: string;
+  company: string;
+  period: string;
+  category?: string;
+  tags: string[];
+  image?: string;
+  description?: string;
+};
+
+export const workExperiences: WorkExperience[] = [
     {
     title: 'Business Portfolio Analyst Co-op Student',
     company: 'Canada Border Services Agency',
-    period: 'May 2024 – Aug 2024',
+    period: 'Sep 2025 – Current',
     tags: ['Power BI', 'Data Visualization', 'Excel'],
     category: 'software',
     image: '/ssc.jpeg',
