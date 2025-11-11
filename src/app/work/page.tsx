@@ -7,13 +7,8 @@ import { workExperiences } from '../../lib/data';
 import Contact from '../../components/Contact';
 
 export default function WorkPage() {
-  const [filter, setFilter] = useState<'software' | 'other' | 'all'>('all');
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const softwareJobs = workExperiences.filter((job) => job.category === 'software');
-  const otherJobs = workExperiences.filter((job) => job.category !== 'software');
-  const activeJobs =
-    filter === 'software' ? softwareJobs : filter === 'other' ? otherJobs : workExperiences;
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const calculateDurationMonths = (period: string) => {
     const [start, end] = period.split(' – ');
@@ -51,47 +46,11 @@ export default function WorkPage() {
         My Work Experience
       </motion.h1>
 
-      {/* Filter buttons */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4 }}
-        className="flex justify-center gap-4 mb-12 flex-wrap"
-      >
-        {['all', 'software', 'other'].map((type) => (
-          <motion.button
-            key={type}
-            whileTap={{ scale: 1.1 }}
-            onClick={() => setFilter(type as 'software' | 'other' | 'all')}
-            className={`px-6 py-2 rounded-full font-semibold transition-colors duration-300 ${
-              filter === type
-                ? type === 'software'
-                  ? 'bg-[#549BF2] text-white'
-                  : type === 'other'
-                  ? 'bg-[#DC493A] text-white'
-                  : 'bg-[#E3F988] text-[#443850]'
-                : `bg-white border ${
-                    type === 'software'
-                      ? 'border-[#549BF2] text-[#549BF2]'
-                      : type === 'other'
-                      ? 'border-[#DC493A] text-[#DC493A]'
-                      : 'border-[#E3F988] text-[#443850]'
-                  }`
-            }`}
-          >
-            {type === 'all'
-              ? 'All'
-              : type === 'software'
-              ? 'Software Experience'
-              : 'Other Experience'}
-          </motion.button>
-        ))}
-      </motion.div>
 
       {/* Timeline and cards */}
       <div className="relative w-full flex flex-col items-center">
         <div className="absolute h-full w-1 bg-[#443850] left-1/2 transform -translate-x-1/2"></div>
-{activeJobs.map((job, i) => {
+{workExperiences.map((job: any, i: number) => {
   const isLeft = i % 2 === 0;
   const months = calculateDurationMonths(job.period);
   const spacing = `${months * 12}px`;
@@ -118,9 +77,7 @@ export default function WorkPage() {
       {/* EXPERIENCE CARD */}
       <div
         onClick={() => setSelectedIndex(i === selectedIndex ? null : i)}
-        className={`relative w-full md:w-[45%] bg-white border-2 p-6 rounded-lg shadow-md hover:shadow-xl cursor-pointer z-10 ${
-          job.category === 'software' ? 'border-[#549BF2]' : 'border-[#DC493A]'
-        } ${isLeft ? 'md:mr-auto' : 'md:ml-auto'}`}
+        className={`relative w-full md:w-[45%] bg-white border-2 p-6 rounded-lg shadow-md hover:shadow-xl cursor-pointer z-10 ${isLeft ? 'md:mr-auto' : 'md:ml-auto'}`}
       >
         {/* Top-right image */}
         {job.image && (
@@ -147,7 +104,7 @@ export default function WorkPage() {
           <h3>{job.company}</h3>
           <p className="text-md text-[#888] mb-2">{job.period}</p>
           <div className="flex flex-wrap gap-2 mb-2">
-            {job.tags.map((tag, t) => {
+            {job.tags.map((tag: string, t: number) => {
               const tagColor =
                 tagColors[tag] || 'bg-gray-300 text-gray-800'; // tagColors object defined globally
               return (

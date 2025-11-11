@@ -1,27 +1,17 @@
 // src/lib/data.ts
 export const workExperiences = [
-  {
-    title: 'Baker & Front of House',
-    company: 'Klippers Organics',
-    period: 'June 2025 – Present',
-    category: 'other',
-    tags: ['Baking', 'Coffee Making'],
-    image: '/klippers.png',
+    {
+    title: 'Business Portfolio Analyst Co-op Student',
+    company: 'Canada Border Services Agency',
+    period: 'May 2024 – Aug 2024',
+    tags: ['Power BI', 'Data Visualization', 'Excel'],
+    category: 'software',
+    image: '/ssc.jpeg',
     description:
-      'Baking & Baristaing',
+      'Built automated scripts and visualizations using Power BI, transforming legacy Excel workflows.',
   },
   {
-    title: 'Front of House Staff',
-    company: 'Life of Pie',
-    period: 'December 2024 – June 2025',
-    category: 'other',
-    tags: ['Coffee Making', 'Serving'],
-    image: '/lop.jpeg',
-    description:
-      'Baristaing',
-  },
-  {
-    title: 'Data Analyst/Visualizer',
+    title: 'Data Analyst/Visualizer Co-op Student',
     company: 'Shared Services Canada',
     period: 'May 2024 – Aug 2024',
     category: 'software',
@@ -31,7 +21,7 @@ export const workExperiences = [
       'Built automated scripts and visualizations using Power BI, transforming legacy Excel workflows.',
   },
   {
-    title: 'UI/UX Developer',
+    title: 'UI/UX Developer Co-op Student',
     company: 'Transport Canada',
     period: 'Jan 2023 – Apr 2023',
     category: 'software',
@@ -49,25 +39,5 @@ export const workExperiences = [
     image: '/ac.jpg',
     description:
       'Collaborated with Telus engineer to come up with networking solutions',
-  },
-  {
-    title: 'Barista & Shift Lead',
-    company: 'Second Cup',
-    period: 'July 2020 – July 2021',
-    category: 'other',
-    tags: ['Coffee Making'],
-    image: '/second-cup.jpg',
-    description:
-      'Baristaing',
-  },
-  {
-    title: 'Assistant Baker',
-    company: 'Life of Pie',
-    period: 'Sep 2019 – Jul 2020',
-    category: 'other',
-    tags: ['Baking','Coffee Making'],
-    image: '/lop.jpeg',
-    description:
-      'Baking & Baristaing',
   },
 ];
