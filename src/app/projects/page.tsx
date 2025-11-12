@@ -7,7 +7,7 @@ export default function ProjectsPage() {
   const projects = getAllProjects();
 
   return (
-    <main className="min-h-screen bg-[#bfdbf7] text-gray-800 px-6 py-16">
+    <main className="min-h-screen bg-[#f5ecd7] text-gray-800 px-6 py-16">
       <h1 className="text-4xl font-bold text-[#443850] mb-8">Projects</h1>
 
       <p className="text-[#555] mb-12 max-w-2xl">

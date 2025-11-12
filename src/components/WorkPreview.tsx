@@ -19,12 +19,12 @@ const jobs = [
 
 export default function WorkPreview() {
   return (
-    <section id="work" className="py-16 bg-[#bfdbf7] px-6 lg:px-32">
+    <section id="work" className="py-16 bg-[#f5ecd7] px-6 lg:px-32">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl font-bold text-[#443850] mb-6"
+        className="text-3xl font-bold text-[#524134] mb-6"
       >
         Work Experience
       </motion.h2>
@@ -35,9 +35,9 @@ export default function WorkPreview() {
             key={index}
             whileHover={{ y: -6, scale: 1.02 }}
             transition={{ type: 'spring', stiffness: 200 }}
-            className="bg-white border-2 border-[#443850] p-4 rounded-xl hover:shadow-lg"
+            className="bg-white border-2 border-[#524134] p-4 rounded-xl hover:shadow-lg"
           >
-            <h3 className="text-lg font-semibold text-[#443850]">{job.title}</h3>
+            <h3 className="text-lg font-semibold text-[#524134]">{job.title}</h3>
             <p className="text-sm text-[#555] mt-2">{job.desc}</p>
           </motion.div>
         ))}

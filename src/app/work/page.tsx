@@ -36,7 +36,7 @@ export default function WorkPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#bfdbf7] text-gray-800 px-6 py-16 scroll-smooth">
+    <main className="min-h-screen bg-[#f5ecd7] text-gray-800 px-6 py-16 scroll-smooth">
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

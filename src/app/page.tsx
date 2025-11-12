@@ -8,16 +8,16 @@ export default function HomePage() {
   return (
     <>
       {/* Home Section */}
-      <section id="home" className="min-h-screen flex flex-col justify-center items-center bg-[#bfdbf7] text-center">
+      <section id="home" className="min-h-screen flex flex-col justify-center items-center bg-[#f5ecd7] text-center">
         <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl font-bold text-[#443850] mb-4"
+          className="text-5xl font-bold text-[#524134] mb-4"
         >
           Tiana Ye
         </motion.h1>
-        <p className="text-lg text-[#549BF2]">Scroll down to explore!</p>
+        <p className="text-lg text-[#524134]">Scroll down to explore!</p>
 
 
         {/*horse animation */}
@@ -47,7 +47,7 @@ export default function HomePage() {
 
 
       {/* About Section */}
-      <section id="about" className="min-h-screen relative flex flex-col justify-center items-start bg-[#bfdbf7] text-left px-8 lg:px-32 text-white overflow-hidden">
+      <section id="about" className="min-h-screen relative flex flex-col justify-center items-start bg-[#f5ecd7] text-left px-8 lg:px-32 text-[#524134] overflow-hidden">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

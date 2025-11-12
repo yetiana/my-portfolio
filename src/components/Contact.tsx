@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col justify-center items-start bg-[#bfdbf7] text-left px-8 lg:px-32 text-white"
+      className="min-h-screen flex flex-col justify-center items-start bg-[#f5ecd7] text-left px-8 lg:px-32 text-[#524134]"
     >
       <motion.h2
         initial={{ rotate: -5 }}
