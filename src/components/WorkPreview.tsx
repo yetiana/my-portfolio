@@ -19,12 +19,12 @@ const jobs = [
 
 export default function WorkPreview() {
   return (
-    <section id="work" className="py-16 bg-[#f5ecd7] px-6 lg:px-32">
+    <section id="work" className="py-16 bg-[#f5ecd7] px-4 md:px-6 lg:px-32">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl font-bold text-[#524134] mb-6"
+        className="text-2xl md:text-3xl font-bold text-[#524134] mb-6"
       >
         Work Experience
       </motion.h2>

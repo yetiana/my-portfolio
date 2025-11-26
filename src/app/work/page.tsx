@@ -36,12 +36,12 @@ export default function WorkPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#f5ecd7] text-gray-800 px-6 py-16 scroll-smooth">
+    <main className="min-h-screen bg-[#f5ecd7] text-gray-800 px-4 md:px-6 py-16 scroll-smooth">
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-[#443850] mb-12 text-center"
+        className="text-2xl md:text-4xl font-bold text-[#443850] mb-12 text-center"
       >
         My Work Experience
       </motion.h1>
@@ -49,7 +49,7 @@ export default function WorkPage() {
 
       {/* Timeline and cards */}
       <div className="relative w-full flex flex-col items-center">
-        <div className="absolute h-full w-1 bg-[#443850] left-1/2 transform -translate-x-1/2"></div>
+        <div className="hidden md:block absolute h-full w-1 bg-[#443850] left-1/2 transform -translate-x-1/2"></div>
 {workExperiences.map((job: WorkExperience, i: number) => {
   const isLeft = i % 2 === 0;
   const months = calculateDurationMonths(job.period);
@@ -63,11 +63,11 @@ export default function WorkPage() {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: i * 0.1 }}
-      className={`relative w-full mb-[${spacing}] flex justify-center px-4 scroll-mt-16`}
+      className={`relative w-full mb-6 md:mb-[${spacing}] flex justify-center px-2 md:px-4 scroll-mt-16`}
     >
       {/* YEAR LABEL */}
       <div
-        className={`absolute top-1/2 -translate-y-1/2 text-lg font-bold text-[#443850] ${
+        className={`hidden md:block absolute top-1/2 -translate-y-1/2 text-lg font-bold text-[#443850] ${
           isLeft ? 'left-[calc(50%+260px)]' : 'right-[calc(50%+260px)]'
         }`}
       >
@@ -77,11 +77,11 @@ export default function WorkPage() {
       {/* EXPERIENCE CARD */}
       <div
         onClick={() => setSelectedIndex(i === selectedIndex ? null : i)}
-        className={`relative w-full md:w-[45%] bg-white border-2 p-6 rounded-lg shadow-md hover:shadow-xl cursor-pointer z-10 ${isLeft ? 'md:mr-auto' : 'md:ml-auto'}`}
+        className={`relative w-full md:w-[45%] bg-white border-2 p-4 md:p-6 rounded-lg shadow-md hover:shadow-xl cursor-pointer z-10 ${isLeft ? 'md:mr-auto' : 'md:ml-auto'}`}
       >
         {/* Top-right image */}
         {job.image && (
-          <div className="absolute top-4 right-4 w-24 h-24 rounded-md overflow-hidden shadow-md">
+          <div className="absolute top-2 right-2 md:top-4 md:right-4 w-16 h-16 md:w-24 md:h-24 rounded-md overflow-hidden shadow-md">
             <Image
               src={job.image}
               alt={job.title}
@@ -93,9 +93,9 @@ export default function WorkPage() {
         )}
 
         {/* Text content */}
-        <div className="pr-28">
+        <div className="pr-16 md:pr-28">
           <h2
-            className={`text-2xl font-semibold mb-2 ${
+            className={`text-lg md:text-2xl font-semibold mb-2 ${
               job.category === 'software' ? 'text-[#549BF2]' : 'text-[#DC493A]'
             }`}
           >

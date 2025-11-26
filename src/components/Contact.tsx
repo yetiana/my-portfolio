@@ -7,13 +7,13 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col justify-center items-start bg-[#f5ecd7] text-left px-8 lg:px-32 text-[#524134]"
+      className="py-16 md:min-h-screen flex flex-col justify-center items-start bg-[#f5ecd7] text-left px-6 md:px-8 lg:px-32 text-[#524134]"
     >
       <motion.h2
         initial={{ rotate: -5 }}
         whileInView={{ rotate: 0 }}
         transition={{ type: 'spring', stiffness: 100 }}
-        className="text-4xl font-bold mb-4"
+        className="text-2xl md:text-4xl font-bold mb-4"
       >
         Contact
       </motion.h2>
